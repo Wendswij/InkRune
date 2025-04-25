@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>InkRune</title>
+  <link rel="stylesheet" href="Style/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="header-wrapper">
+    <nav>
+      <div class="nav-container">
+        <div class="nav-center">
+          <a href="index.html" class="active">HOME</a>
+          <button id="fullscreen-toggle" class="nav-button">FULLSCREEN</button>
+          <button id="color-toggle" class="nav-button">COLOUR</button>
+          <a href="https://www.instagram.com/wendyywijaya/">CONTACT</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="main">
+      <div class="todo-section">
+        <h2>To Do:</h2>
+        <div class="todo-input">
+          <input type="text" id="new-task" placeholder="Add a new task...">
+          <input type="text" id="course-code" placeholder="Course code (e.g. SCTM-2005)">
+          <input type="date" id="due-date">
+          <button id="add-task">Add</button>
+        </div>
+        <ul id="task-list"></ul>
+      </div>
+
+
+      <div class="right-column">
+        <h2>Archive:</h2>
+        <div>
+          <a href="archive.html" class="archive-link">📁 View Archive</a>
+        </div>
+
+        <div class="task-box">Tasks left: <span id="task-counter"> 0</span></div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="bottom-row">
+    <div class="bottom-box" id="semester-countdown">
+      <div id="countdown-input">
+        <h3><label for="semester-end" style="font-family: 'Courier New', Courier, monospace; font-weight: bold;">Enter
+            semester end date:</label><br></h3>
+        <input type="date" id="semester-end">
+      </div>
+
+      <div id="countdown-display" style="display: none;">
+        Time left: <span id="time-left">--</span>
+      </div>
+    </div>
+
+    <div class="bottom-box" id="drop-date-box">
+      <div id="drop-date-inputs">
+        <h3>Enter drop deadlines:</h3><br>
+        <label>100% refund:</label>
+        <input type="date" id="drop-date-100"><br>
+        <label>50% refund:</label>
+        <input type="date" id="drop-date-50"><br>
+        <label>0% refund:</label>
+        <input type="date" id="drop-date-0"><br><br>
+        <button id="start-drop-timers">Start Countdown</button>
+      </div>
+
+      <div id="drop-countdowns" style="display: none;">
+        <div>100% refund drop ends in: <span id="countdown-100">--</span></div>
+        <div>50% refund drop ends in: <span id="countdown-50">--</span></div>
+        <div>0% refund drop ends in: <span id="countdown-0">--</span></div>
+      </div>
+    </div>
+
+    <div class="bottom-box" id="exam-tracker">
+      <h3>Exam Tracker</h3>
+      <div id="exam-inputs">
+        <input type="text" id="exam-name" placeholder="Exam name">
+        <input type="text" id="exam-course" placeholder="Course code">
+        <input type="date" id="exam-date">
+        <button id="add-exam">Add Exam</button>
+      </div>
+      <ul id="exam-list"></ul>
+    </div>
+
+  </div>
+  </div>
+
+  <script src="Scripts/main.js"></script>
+  <script src="Scripts/drop.js"></script>
+  <script src="Scripts/exam.js"></script>
+  <script src="Scripts/timer.js"></script>
+  <script src="Scripts/full.js"></script>
+  <script src="Scripts/colour.js"></script>
+  <script src="Scripts/p5.min.js"></script>
+
+
+</body>
+
+</html>
